@@ -10,10 +10,13 @@ class Spacectl < Formula
 
   def install
     ENV["GOPATH"] = buildpath
+    ENV["CI_BUILD_TAG"] = "v1.7.0"
+    ENV["CI_COMMIT_SHA"] = "7a749dbc5e8fab1992584110575b2d16e9c1016f"
 
     (buildpath/"src/github.com/mittwald/spacectl").install buildpath.children
 
     cd "src/github.com/mittwald/spacectl" do
+      system "go", "generate"
       system "go", "build"
       bin.install "spacectl" => "spacectl"
     end
