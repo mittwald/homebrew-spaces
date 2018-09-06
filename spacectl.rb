@@ -1,9 +1,11 @@
 class Spacectl < Formula
   desc "CLI client for Mittwald SPACES"
   homepage "https://spaces.de"
-  url "https://github.com/mittwald/spacectl/archive/v1.6.0.tar.gz"
-  sha256 "5e407f6c87e46603285aba5dd1e7f91a541cbea6cbc6578ba0cea5fbce56e12e"
-
+  url "https://github.com/mittwald/spacectl.git",
+    :tag => "1.7.0"
+    :revision => "7a749dbc5e8fab1992584110575b2d16e9c1016f"
+  head "https://github.com/mittwald/spacectl.git"
+  
   depends_on "go" => :build
 
   def install
