@@ -2,7 +2,7 @@ class Spacectl < Formula
   desc "CLI client for Mittwald SPACES"
   homepage "https://spaces.de"
   url "https://github.com/mittwald/spacectl.git",
-    :tag => "1.7.0",
+    :tag => "v1.7.0",
     :revision => "7a749dbc5e8fab1992584110575b2d16e9c1016f"
   head "https://github.com/mittwald/spacectl.git"
   
