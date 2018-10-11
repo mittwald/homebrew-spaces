@@ -2,16 +2,16 @@ class Spacectl < Formula
   desc "CLI client for Mittwald SPACES"
   homepage "https://spaces.de"
   url "https://github.com/mittwald/spacectl.git",
-    :tag => "v1.7.0",
-    :revision => "7a749dbc5e8fab1992584110575b2d16e9c1016f"
+    :tag => "v1.8.0",
+    :revision => "bc684e31bc378f6af884e4b4a5da9ce5fb82748e"
   head "https://github.com/mittwald/spacectl.git"
   
   depends_on "go" => :build
 
   def install
     ENV["GOPATH"] = buildpath
-    ENV["CI_BUILD_TAG"] = "v1.7.0"
-    ENV["CI_COMMIT_SHA"] = "7a749dbc5e8fab1992584110575b2d16e9c1016f"
+    ENV["CI_BUILD_TAG"] = "v1.8.0"
+    ENV["CI_COMMIT_SHA"] = "bc684e31bc378f6af884e4b4a5da9ce5fb82748e"
 
     (buildpath/"src/github.com/mittwald/spacectl").install buildpath.children
 
