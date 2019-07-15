@@ -2,9 +2,15 @@
 class Spacectl < Formula
   desc "CLI client for Mittwald SPACES"
   homepage "https://www.spaces.de/"
-  url "https://github.com/mittwald/spacectl/releases/download/v1.11.8/spacectl_1.11.8_darwin_amd64.tar.gz"
-  version "1.11.8"
-  sha256 "540a6b7075e31b0fa5b22a28f2cdbf39578757a84d3565b9de6830e274ccad82"
+  version "1.11.9"
+
+  if OS.mac?
+    url "https://github.com/mittwald/spacectl/releases/download/v1.11.9/spacectl_1.11.9_darwin_amd64.tar.gz"
+    sha256 "b03f92125d15f090040bd0a28613465533828ffadfda86fa6f8a39e7bc8e7593"
+  elsif OS.linux?
+    url "https://github.com/mittwald/spacectl/releases/download/v1.11.9/spacectl_1.11.9_linux_amd64.tar.gz"
+    sha256 "f5e7da5549ef496024fa20d5c519788090353469cfd4e674b882ebbcba0a3610"
+  end
 
   def install
     bin.install "spacectl"
